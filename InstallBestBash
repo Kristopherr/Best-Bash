@@ -1,7 +1,7 @@
 #!/bin/bash
 #install root bash-- run as sudo
 if [ "$EUID" -ne 0 ]
-        then echo "Please run sudo or as root'"
+        then echo "Please run as superuser"
         exit
 fi
 #required apps
