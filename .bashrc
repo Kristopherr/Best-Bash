@@ -49,6 +49,15 @@ echo ' '
 echo ' '
 fortune
 echo ' '
+#info to use in PS1:
+#ipv6
 dig @resolver1.opendns.com AAAA myip.opendns.com +short -6
+#ipv4
 dig @resolver1.opendns.com A myip.opendns.com +short -4
+#local ip
+ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+#Names
+echo "$USER@$HOSTNAME"
+#working dir
+pwd
 echo ' '
