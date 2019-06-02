@@ -51,3 +51,4 @@ fortune
 echo ' '
 dig @resolver1.opendns.com AAAA myip.opendns.com +short -6
 dig @resolver1.opendns.com A myip.opendns.com +short -4
+echo ' '
