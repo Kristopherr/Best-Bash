@@ -1,7 +1,6 @@
-# Linux-Scripts-Config
-Configs and scrips for linux
-
-Work in progress...
+# Best Bash
+Thanks to Parrot OS, figlet, and fortune.
+Very new work in progress...
 
 Best Bash is an attempt to create an entertaining and handsome bash.  
 
