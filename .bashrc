@@ -55,7 +55,7 @@ dig @resolver1.opendns.com AAAA myip.opendns.com +short -6
 #ipv4
 dig @resolver1.opendns.com A myip.opendns.com +short -4
 #local ip
-ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+hostname -I | head -n1 | cut -d " " -f1
 #Names
 echo "$USER@$HOSTNAME"
 #working dir
