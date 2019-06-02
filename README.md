@@ -17,4 +17,5 @@ Works in debian/ubuntu based distro. Any disto bash will work by replacing "/hom
 PS1 is a ripoff of Parrot OS. I want to make it in then format of:
 
 ┌─[USER@HOSTNAME]─[local ip]─[public ip]
+
 └─[location]─╼ $
