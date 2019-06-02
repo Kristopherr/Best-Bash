@@ -4,9 +4,11 @@ if [ "$EUID" -ne 0 ]
 	then echo "Please run sudo or as root'"
 	exit
 fi
+#required apps
 apt install figlet fortune
+#replace root bash
 sudo mv /root/.bashrc /root/.bashrc-old
-sudo curl https://raw.githubusercontent.com/Kristopherr/Linux-Scripts-Config/master/.bashrc > /root/.bashrc
-#install user bash
+sudo curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /root/.bashrc
+#replace user bash
 mv /home/$USER/.bashrc /home/$USER/.bashrc-old
-curl https://raw.githubusercontent.com/Kristopherr/Linux-Scripts-Config/master/.bashrc > /home/$USER/.bashrc
+curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /home/$USER/.bashrc
