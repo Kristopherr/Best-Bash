@@ -13,3 +13,8 @@ Best Bash is an attempt to create an entertaining and handsome bash.
 enjoy
 
 Works in debian/ubuntu based distro. Any disto bash will work by replacing "/home/$USER/.bashrc" and/or "/root/.bashrc" file here with ones in distro and installing figlet and fortune.
+
+PS1 is a ripoff of Parrot OS. I want to make it in then format of:
+
+┌─[USER@HOSTNAME]─[local ip]─[public ip]
+└─[location]─╼ $
