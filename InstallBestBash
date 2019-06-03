@@ -1,14 +1,21 @@
 #!/bin/bash
 #install root bash-- run as sudo
-if [ "$EUID" -ne 0 ]
-        then echo "Please run as superuser"
-        exit
+if [ "$EUID" -ne 0 ]; then echo "This will only change user bash. To change root run as superuser."; fi
+echo
+echo "1) Revert to Original Bash"
+echo "2) Replace/Update Better Bash"
+echo
+read choice
+if [ "$choice" == 1 ] && [ "$EUID" -ne 0 ]; then 
+    cp /etc/skel/.bashrc /home/$USER/.bashrc
+    cp /etc/skel/.profile /home/$USER/.profile
+    cp /etc/skel/.bash_logout /home/$USER/.bash_logout
+elif [ "$choice" == 1 ] && [ "$EUID" -eq 0 ]; then
+    cp /etc/skel/.bashrc /root/.bashrc
+    cp /etc/skel/.profile /root/.profile
+    cp /etc/skel/.bash_logout /root/.bash_logout
+elif [ "$choice" == 2 ] && [ "$EUID" -eq 0 ]; then
+    curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /root/.bashrc
+elif [ "$choice" == 2 ] && [ "$EUID" -ne 0 ]; then   
+    curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /home/$USER/.bashrc
 fi
-#required apps
-apt install figlet fortune
-#replace root bash
-sudo mv /root/.bashrc /root/.bashrc-old
-sudo curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /root/.bashrc
-#replace user bash
-mv /home/$SUDO_USER/.bashrc /home/$SUDO_USER/.bashrc-old
-curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /home/$SUDO_USER/.bashrc
