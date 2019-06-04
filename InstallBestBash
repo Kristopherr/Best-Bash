@@ -4,6 +4,7 @@ if [ "$EUID" -ne 0 ]; then echo "This will only change user bash. To change root
 echo
 echo "1) Revert to Original Bash"
 echo "2) Replace/Update Better Bash"
+echo "3) Install required packages: figlet and dnsutils"
 echo
 read choice
 if [ "$choice" == 1 ] && [ "$EUID" -ne 0 ]; then 
@@ -18,4 +19,4 @@ elif [ "$choice" == 2 ] && [ "$EUID" -eq 0 ]; then
     curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /root/.bashrc
 elif [ "$choice" == 2 ] && [ "$EUID" -ne 0 ]; then   
     curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /home/$USER/.bashrc
-fi
+elif [ "$choice" == 3 ]; then apt install figlet dnsutils; fi
