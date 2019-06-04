@@ -1,6 +1,7 @@
 # Best Bash
 Best Bash is an attempt to create an entertaining and handsome bash.  
-Currently requires figlet and dig from dnsutils package.
+Currently requires figlet (for quotes on load and clear screen) and dig from dnsutils package (for IP address enum).
+Installer will attemp to get required packages.
 
 1) Download file InstallBestBash
 2) chmod +x InstallBestBash
