@@ -37,16 +37,15 @@ alias _='sudo'
 alias _i='sudo -i'
 
 #Added alias:
-alias cls='tput reset && echo " " && fortune && echo " " '
-alias clear='tput reset && echo " " && fortune && echo " " '
+alias cls='tput reset && echo -e "\n\e[33m$(fortune)\e[m\n"'
+alias clear='tput reset && echo -e "\n\e[33m$(fortune)\e[m\n"'
 alias aptupdate='sudo apt update && sudo apt upgrade'
 
 #Welcome Message install figlet and customize; or comment out.
-figlet Welcome $USER ! ! !
+echo -e "\e[31m$(figlet Welcome $USER ! ! !)\e[m"
 
 #random quote generator install fortune
 echo ' '
 echo ' '
-fortune
+echo -e "\e[33m$(fortune)\e[m"
 echo ' '
-
