@@ -14,7 +14,7 @@ Works in debian/ubuntu based distro. Any disto bash will work by replacing "/hom
 
 Works!~
 
-╭╼[user@hostname]╾╼[local ip]╾╼[public ip] 
+╭╼[user@hostname]╾╼[local ip]╾╼[public ip]  
 ╰──╼[location]─╼ $
 
 No networking is in dev and borked.
