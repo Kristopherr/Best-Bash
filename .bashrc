@@ -1,4 +1,3 @@
-# Best .bashrc to come... much credit to Parrot OS, fortune creators, and others -- https://github.com/ParrotSec/parrot-core/blob/master/parrot-core/root/.bashrc
 # --> Place in /home/$USER and /root for a better bash.
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH
 
