@@ -19,4 +19,4 @@ elif [ "$choice" == 2 ] && [ "$EUID" -eq 0 ]; then
     curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /root/.bashrc
 elif [ "$choice" == 2 ] && [ "$EUID" -ne 0 ]; then   
     curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /home/$USER/.bashrc
-elif [ "$choice" == 3 ]; then apt install figlet dnsutils; fi
+elif [ "$choice" == 3 ]; then sudo apt install figlet dnsutils; fi
