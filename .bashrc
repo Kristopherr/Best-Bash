@@ -7,7 +7,7 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 shopt -s checkwinsize
-PS1='\[\e[31m\]╭╼[\[\e[m\]$USER\[\e[33m\]@\[\e[m\]\[\e[01;36m\]$HOSTNAME\[\e[m\]\[\e[31m\]]╾╼[\[\e[m\]\[\e[36m\]$(hostname -I | head -n1 | cut -d " " -f1)\[\e[m\]\[\e[31m\]]╾╼[\[\e[m\]\[\e[36m\]$(dig @resolver1.opendns.com A myip.opendns.com +short -4)\[\e[m\]\[\e[31m\]]\[\e[m\]\n\[\e[31m\]╰──╼[\[\e[m\]\w\[\e[31m\]]─╼\[\e[m\] \[\e[01;33m\]\\$\[$(tput sgr0)\]\[\e[m\]'
+PS1='\[\e[31m\]╭╼[\[\e[m\]$USER\[\e[33m\]@\[\e[m\]\[\e[01;36m\]$HOSTNAME\[\e[m\]\[\e[31m\]]╾╼[\[\e[m\]\[\e[36m\]$(hostname -I | head -n1 | cut -d " " -f1)\[\e[m\]\[\e[31m\]]╾╼[\[\e[m\]\[\e[36m\]$(dig @resolver1.opendns.com A myip.opendns.com +short -4)\[\e[m\]\[\e[31m\]]\[\e[m\]\n\[\e[31m\]╰──╼[\[\e[m\]\w\[\e[31m\]]╾╼\[\e[m\] \[\e[01;33m\]\\$\[$(tput sgr0)\]\[\e[m\]'
 
 man() {
 env \
@@ -49,3 +49,4 @@ echo ' '
 echo ' '
 fortune
 echo ' '
+
