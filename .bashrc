@@ -49,15 +49,3 @@ echo ' '
 echo ' '
 fortune
 echo ' '
-#info to use in PS1:
-#ipv6
-dig @resolver1.opendns.com AAAA myip.opendns.com +short -6
-#ipv4
-dig @resolver1.opendns.com A myip.opendns.com +short -4
-#local ip
-hostname -I | head -n1 | cut -d " " -f1
-#Names
-echo "$USER@$HOSTNAME"
-#working dir
-pwd
-echo ' '
