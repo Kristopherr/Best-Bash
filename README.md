@@ -6,7 +6,7 @@ Currently requires figlet and dig from dnsutils package.
 2) chmod +x InstallBestBash
 3) sudo ./InstallBestBash
 
-* old .bashrc will be backed up as .bashrc-old
+"install gives option to restore original bash files."
 
 enjoy
 
