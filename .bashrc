@@ -45,7 +45,4 @@ alias aptupdate='sudo apt update && sudo apt upgrade'
 echo -e "\e[31m$(figlet Welcome $USER ! ! !)\e[m"
 
 #random quote generator install fortune
-echo ' '
-echo ' '
-echo -e "\e[33m$(fortune)\e[m"
-echo ' '
+echo -e "\n\n\e[33m$(fortune)\e[m\n"
