@@ -11,9 +11,9 @@ if [ "$choice" == 1 ] && [ "$EUID" -ne 0 ]; then
     cp /etc/skel/.profile /home/$USER/.profile && echo "Replaced --> /home/$USER/.profile"
     cp /etc/skel/.bash_logout /home/$USER/.bash_logout && echo "Replaced --> /home/$USER/.bash_logout" && echo "Success"
 elif [ "$choice" == 1 ] && [ "$EUID" -eq 0 ]; then
-    cp /etc/skel/.bashrc /root/.bashrc && echo "Replaced --> /root/.bashrc"
-    cp /etc/skel/.profile /root/.profile && echo "Replaced --> /root/.profile"
-    cp /etc/skel/.bash_logout /root/.bash_logout && echo "Replaced --> /root/.bash_logout" && echo "Success"
+    cp /etc/skel/.bashrc /root/.bashrc && echo "Reverted --> /root/.bashrc"
+    cp /etc/skel/.profile /root/.profile && echo "Reverted --> /root/.profile"
+    cp /etc/skel/.bash_logout /root/.bash_logout && echo "Reverted --> /root/.bash_logout" && echo "Success"
 elif [ "$choice" == 2 ] && [ "$EUID" -eq 0 ]; then
     curl https://raw.githubusercontent.com/Kristopherr/Best-Bash/master/.bashrc > /root/.bashrc
 elif [ "$choice" == 2 ] && [ "$EUID" -ne 0 ]; then   
