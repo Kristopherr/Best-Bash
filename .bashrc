@@ -41,7 +41,8 @@ alias clear='tput reset && echo -e "\n\e[33m$(fortune)\e[m\n"'
 alias aptupdate='sudo apt update && sudo apt upgrade'
 
 #Welcome Message install figlet and customize; or comment out.
-echo -e "\e[31m$(figlet Welcome $USER ! ! !)\e[m"
+#echo -e "\e[31m$(figlet Welcome $USER ! ! !)\e[m"
+neofetch
 
 #random quote generator install fortune
 echo -e "\n\n\e[33m$(fortune)\e[m\n"
