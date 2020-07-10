@@ -18,4 +18,4 @@ Works!~
 ╭╼[user@hostname]╾╼[local ip]╾╼[public ip]  
 ╰──╼[location]─╼ $
 
-No networking is in dev and borked (displays dig error).
+No networking is borked duh. 
